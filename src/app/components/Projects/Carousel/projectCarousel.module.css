@@ -1,0 +1,37 @@
+.arrowButtonRight {
+  cursor: pointer;
+}
+
+.arrowButtonLeft{
+  cursor: pointer;
+}
+
+.arrowIcon {
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+  color:#e6e6e6
+}
+
+.arrowIcon:active {
+  transform: scale(0.8);
+}
+
+.dotButton{
+  position: relative;
+  cursor: pointer;
+}
+
+.dotButton::before{
+  margin:0;
+  content: '';
+  position: absolute;
+  inset:4px;
+  background-color: #e6e6e6;
+  border-radius: 100%;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.dotButtonTrue::before{
+  opacity: 1;
+}
