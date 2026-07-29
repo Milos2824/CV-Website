@@ -1,0 +1,67 @@
+@property --radius {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+
+.techsBg {
+  background-image: radial-gradient(circle, #3a3842 var(--radius), #f0f9fa calc(var(--radius) + 10px));
+  animation: growCircle 2s ease-in-out forwards;
+}
+.techsBg1 {
+  background-image: radial-gradient(circle, transparent var(--radius), #f0f9fa calc(var(--radius) + 10px));
+  animation: disapear 2s ease-in-out forwards;
+}
+
+@keyframes growCircle {
+  0% {
+    --radius: 0%;
+  }
+  100% {
+    --radius: 100%;
+  }
+}
+
+@keyframes disapear {
+  0% {
+    --radius: 0%;
+  }
+  100% {
+    --radius: 100%;
+    display: none;
+  }
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+  background-color:#e6e6e6;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -4px;
+  height: 4px;
+  width: 110%;
+}
+
+.TitleText {
+  animation-name: shine;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  background: linear-gradient(to right,#bf8c1f 20%, #ffcb5b 40%, #ffcb5b 60%, #bf8c1f 80%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 200%;
+  background-position: 200%;
+}
+
+@keyframes shine {
+  from{
+    background-position: 0%;
+  }
+  to{
+    background-position: 200%;
+  }
+}

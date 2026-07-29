@@ -12,11 +12,19 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --text-big: 3.0rem;
+  --text-custom-4xl: 2.75rem;
+  --font-roboto-slab: var(--font-roboto-slab);
+
+  --breakpoint-sm-custom: 900px;
+  --breakpoint-md-custom: 1000px;
+  --breakpoint-lg-custom: 657px;
+  --breakpoint-xl-custom: 1480px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

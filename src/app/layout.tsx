@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Roboto_Slab } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/NavBar/NavBar";
+import { ScrollProvider } from "./context/ScrollContext";
+import Footer from "./components/Footer/Footer";
+
+const robotoSlab = Roboto_Slab({
+  subsets: ['latin', 'latin-ext'],
+  variable: '--font-roboto-slab', 
+  weight: ['400', '600', '700'],
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,11 +32,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
+    <html 
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${robotoSlab.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <ScrollProvider>
+          <Navbar />
+          <main className="relative w-full min-h-screen">
+            {children}
+          </main>
+          <Footer />
+        </ScrollProvider>
+      </body>
     </html>
   );
 }
