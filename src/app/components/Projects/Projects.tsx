@@ -53,7 +53,7 @@ const Projects = () => {
     },
     {
       title: "Unity Interaction System",
-      description: "A physics-based interaction prototype featuring object grabbing, Rigidbody movement, and collision handling. Currently under development.",
+      description: "A physics-based interaction prototype featuring object grabbing, Rigidbody movement, and collision handling. Currently a work in progress.",
       type: "video",
       techs: [
         {
