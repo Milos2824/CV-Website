@@ -39,11 +39,6 @@ const Projects = () => {
           className: "w-20 m-5"
         },
         {
-          name: "Node.js",
-          icon: NodeJsIcon,
-          className: "w-20 m-5"
-        },
-        {
           name: "SQL Server",
           icon: SQLserverIcon,
           className: "text-xl text-white font-semibold m-5"
